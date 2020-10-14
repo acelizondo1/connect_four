@@ -16,8 +16,16 @@ describe GameBoard do
   end
 
   describe "#make_move" do
-    it "enters a player move" do
+    it "enters a x player move" do
       expect(game_board.make_move(1, 'x')).to eql('x')
+    end
+
+    it "enters a o player move" do
+      expect(game_board.make_move(1, 'o')).to eql('o')
+    end
+
+    it "returns false if column is outside of board limits" do
+      expect(game_board.make_move(8, 'x')).to eql(false)
     end
 
     it "returns false on a full row" do
@@ -26,6 +34,8 @@ describe GameBoard do
     end 
   end
 
-
+  describe "#check_winner" do
+    
+  end
 end
 
