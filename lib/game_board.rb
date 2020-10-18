@@ -98,8 +98,3 @@ attr_reader :board
     false
   end
 end
-
-# game = GameBoard.new
-# game.display_board
-# game.make_move(1,'x')
-# game.display_board
